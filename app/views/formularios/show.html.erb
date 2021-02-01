@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @formulario.nombre %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @formulario.telefono %>
+</p>
+
+<p>
+  <strong>Mascota:</strong>
+  <%= @formulario.mascota %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @formulario.sexo %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @formulario.descripcion %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @formulario.fecha %>
+</p>
+
+<p>
+  <strong>Imagen:</strong>
+  <%= image_tag @formulario.picture.thumb.url, class: 'figure-img img-fluid rounded' %>
+</p>
+
+<%= link_to 'Edit', edit_formulario_path(@formulario) %> |
+<%= link_to 'Back', formularios_path %>
