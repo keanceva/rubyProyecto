@@ -1,3 +1,5 @@
+<%= render 'layouts/header' %>
+
 <%= form_with(model: formulario) do |form| %>
   <% if formulario.errors.any? %>
     <div id="error_explanation">
@@ -11,42 +13,44 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :nombre %>
-    <%= form.text_field :nombre %>
+  <div class="col-md-8 mx-auto" style="padding-bottom: 200px;padding-top: 100px">
+  <div class="card card-body">
+
+
+  <%= form.label :nombre %>
+  <%= form.text_field :nombre %>
+
+
+<%= form.label :telefono %>
+<%= form.text_field :telefono %>
+
+
+<%= form.label :mascota %>
+<%= form.text_field :mascota %>
+
+
+<%= form.label :sexo %>
+<%= form.text_field :sexo %>
+
+<%= form.label :descripcion %>
+<%= form.text_area :descripcion %>
+
+<%= form.label :fecha %>
+<%= form.date_select :fecha %>
+
+<%= form.label :picture %>
+<%= form.file_field :picture %>
+<div class="actions">
+<%= form.submit %>
+</div>
+  </div>
   </div>
 
-  <div class="field">
-    <%= form.label :telefono %>
-    <%= form.text_field :telefono %>
-  </div>
+ 
 
-  <div class="field">
-    <%= form.label :mascota %>
-    <%= form.text_field :mascota %>
-  </div>
 
-  <div class="field">
-    <%= form.label :sexo %>
-    <%= form.text_field :sexo %>
-  </div>
 
-  <div class="field">
-    <%= form.label :descripcion %>
-    <%= form.text_area :descripcion %>
-  </div>
-
-  <div class="field">
-    <%= form.label :fecha %>
-    <%= form.date_select :fecha %>
-  </div>
-
-  <div class="field">
-    <%= form.label :picture %>
-    <%= form.file_field :picture %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
+
+<%= render 'layouts/footer' %>
+
